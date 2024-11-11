@@ -1,0 +1,19 @@
+<div class="cart-container">
+  <div  *ngIf="(emptyCart$ | async); else cartContent">
+    <p class="emptyCart">🛒 Carrito vacío</p>
+  </div>
+
+  <ng-template #cartContent>
+    <h2>Carrito</h2>
+    <div *ngIf="groupedCartItems$ | async as groupedCartItems">
+      <div *ngFor="let eventTitle of groupedCartItems | keyvalue">
+        <h3>{{ eventTitle.key }}</h3> <!-- Título del evento -->
+        <div *ngFor="let item of eventTitle.value" class="cart-item">
+          <p>{{ item.session.date | date: 'dd/MM/yyyy' }} - x{{ item.quantity }}</p>
+
+          <img class="icon-trash" src="../../../assets/img/trash.png" (click)="removeSession(item.session.date, item.eventTitle)" alt="">
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,58 @@
+.event-container{
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  padding-top: 80px;
+  margin: 0 auto;
+}
+.goBack{
+  color: #87ceeb;
+  text-align: end;
+  cursor: pointer;
+
+
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+ justify-content: space-between;
+}
+.container-sessions-details{
+  width: 50%;
+
+}
+.cart{
+  width: 50%;
+}
+
+.sessions-list{
+  border: 1px solid black;
+  padding-top: 8px;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container-sessions-details{
+    width: 100%;
+
+  }
+  .cart{
+    width: 100%;
+  }
+}
+
+.error-message {
+
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
+  padding-top: 80px;
+}

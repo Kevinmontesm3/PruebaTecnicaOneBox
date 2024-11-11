@@ -1,0 +1,27 @@
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.session-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.session-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btnControls{
+  font-weight: bold;
+  font-size: 20px;
+  color: #008cba;
+  cursor: pointer;
+}

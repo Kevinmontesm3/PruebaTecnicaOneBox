@@ -1,0 +1,40 @@
+.cart-container {
+  padding: 1rem;
+  margin-left: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #c00;
+}
+.icon-trash{
+  max-height: 1.5rem;
+  cursor: pointer;
+}
+
+.emptyCart{
+  font-size: 30px;
+  margin-top: 20vh;
+}

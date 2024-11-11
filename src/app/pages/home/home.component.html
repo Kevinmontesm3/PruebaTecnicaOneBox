@@ -1,0 +1,5 @@
+<div *ngIf="events$ | async as events;" class="events-grid">
+  <app-event *ngFor="let event of events" [event]="event"/>
+</div>
+
+

@@ -1,0 +1,22 @@
+.events-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  padding-top: 80px;
+  margin: 0 auto;
+
+}
+
+/* Responsive columns */
+@media (min-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

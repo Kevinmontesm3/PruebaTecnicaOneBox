@@ -1,0 +1,9 @@
+<div class="event-card">
+  <h2 class="goToDetails" (click)="goToDetails(event.id)">{{ event.title }}</h2>
+  <h4 class="goToDetails" (click)="goToDetails(event.id)">{{ event.subtitle }}</h4>
+  <img [src]="event.image" alt="Event Image" (click)="goToDetails(event.id)">
+  <p>Lugar: {{ event.place }}</p>
+  <p>{{event.startDate | date: 'dd/MM/yyyy'}} - {{event.endDate | date: 'dd/MM/yyyy'}}</p>
+  <p class="description" [innerHTML]="event.description "></p>
+  <button (click)="goToDetails(event.id)">Ver detalles</button>
+</div>

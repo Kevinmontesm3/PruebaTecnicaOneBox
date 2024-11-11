@@ -1,0 +1,23 @@
+<div class="event-container" >
+  <p (click)="goBack()" class="goBack">Volver</p>
+  <div></div>
+  <div class="flex" >
+  <div class="container-sessions-details" *ngIf="eventDetail$ | async as eventDetail; else errorTemplate">
+    <h1>{{ eventDetail.event.title }}</h1>
+    <h2>{{ eventDetail.event.subtitle }}</h2>
+
+    <h3>Sesiones</h3>
+    <div class="sessions-list">
+      <div *ngIf="eventDetail$ | async as events;" class="events-grid">
+        <app-sesion *ngFor="let session of eventDetail.sessions" [session]="session"  [nameEvent]="eventDetail.event.title" class="session-item" />
+      </div>
+    </div>
+  </div>
+  <div class="cart">
+    <app-cart/>
+  </div></div>
+</div>
+<ng-template #errorTemplate>
+  <div class="error-message">
+    INFORMACIÓN DEL EVENTO NO ENCONTRADA</div>
+</ng-template>
